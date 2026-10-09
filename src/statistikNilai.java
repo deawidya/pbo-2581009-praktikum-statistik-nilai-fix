@@ -94,6 +94,31 @@ public class statistikNilai {
         ArrayList<Integer> terurut = new ArrayList<>(daftar);
         Collections.sort(terurut);
 
+        System.out.println();
+        System.out.println("Nilai tersimpan : " + daftar);
+        System.out.println("Jumlah          : " + daftar.size());
+        System.out.println("Rata-rata       : "
+                + String.format(new Locale("id", "ID"),
+                "%.2f", rataRata));
+        System.out.println("Tertinggi       : " + tertinggi);
+        System.out.println("Terendah        : " + terendah);
+        System.out.println("Di atas rata2   : "
+                + diAtasRataRata + " orang");
+
+        String[] namaGrade = {"A", "B", "C", "D", "E"};
+        System.out.print("Distribusi      :");
+
+        for (int i = 0; i < jumlahGrade.length; i++) {
+            System.out.print(" " + namaGrade[i]
+                    + "=" + jumlahGrade[i]);
+        }
+
+        System.out.println();
+        System.out.println("Terurut         : " + terurut);
+        System.out.println("Urutan asli     : " + daftar);
+
+        input.close();
+
         input.close();
     }
 }
