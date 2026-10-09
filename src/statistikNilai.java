@@ -83,6 +83,14 @@ public class statistikNilai {
 
         double rataRata = (double) total / daftar.size();
 
+        int diAtasRataRata = 0;
+
+        for (int x : daftar) {
+            if (x > rataRata) {
+                diAtasRataRata++;
+            }
+        }
+
         input.close();
     }
 }
