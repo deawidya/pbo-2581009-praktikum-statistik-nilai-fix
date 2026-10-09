@@ -43,6 +43,46 @@ public class statistikNilai {
 
         } while (nilai != SELESAI);
 
+
+        if (daftar.size() == 0) {
+            System.out.println();
+            System.out.println("Tidak ada nilai yang dimasukkan.");
+            input.close();
+            return;
+        }
+
+        int total = 0;
+        int tertinggi = daftar.get(0);
+        int terendah = daftar.get(0);
+
+        int[] jumlahGrade = new int[5];
+
+        for (int x : daftar) {
+            total += x;
+
+            if (x > tertinggi) {
+                tertinggi = x;
+            }
+
+            if (x < terendah) {
+                terendah = x;
+            }
+
+            if (x >= 90) {
+                jumlahGrade[0]++;
+            } else if (x >= 80) {
+                jumlahGrade[1]++;
+            } else if (x >= 70) {
+                jumlahGrade[2]++;
+            } else if (x >= 60) {
+                jumlahGrade[3]++;
+            } else {
+                jumlahGrade[4]++;
+            }
+        }
+
+        double rataRata = (double) total / daftar.size();
+
         input.close();
     }
 }
