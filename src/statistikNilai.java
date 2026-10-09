@@ -91,6 +91,9 @@ public class statistikNilai {
             }
         }
 
+        ArrayList<Integer> terurut = new ArrayList<>(daftar);
+        Collections.sort(terurut);
+
         input.close();
     }
 }
